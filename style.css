@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
+
+:root{
+    --primary-color: #0d47a1;
+    --dark-color: #424242;
+    --light-color: #cfd8dc;
+    --lose-color: #d32f2f;
+    --win-color: #689f38 ;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Handlee', cursive;
+    line-height: 1.6;
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.restart-btn{
+    display: none;
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: all 0.1s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+.restart-btn:hover{
+    background: var(--primary-color);
+    transition: all 0.1s ease-in-out;
+}
+
+.header{
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.header h1{
+    margin-bottom: 1rem;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.1rem;
+}
+
+.score p:first-child{
+    background: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 10px;
+}
+
+.score p:last-child{
+    background: var(--dark-color);
+    color: var(--light-color);
+    border-radius: 10px;
+}
+
+
+.choices{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.3rem;
+    margin-top: 2rem;
+    text-align: center
+}
+
+.choice {
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.choice:hover{
+    transition: all 0.1s ease-in-out;
+    color: var(--primary-color);
+}
+
+.text-win{
+    color: var(--win-color);
+}
+
+.text-lose{
+    color: var(--lose-color);
+}
+
+.rules{
+    margin-top: 8rem;
+}
+
+
+footer{
+    margin-top: 16rem;
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+@media(max-width: 700px) {
+    .choice{
+        font-size: 80px;
+    }
+    .rules{
+        margin-top: 4rem;
+    }
+
+    footer{
+        margin-top: 7rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .choice{
+        font-size: 40px;
+    }
+    .rules{
+        margin-top: 2rem;
+    }
+
+    footer{
+        margin-top: 4rem;
+    }
+}
